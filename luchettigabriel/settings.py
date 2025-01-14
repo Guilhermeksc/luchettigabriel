@@ -24,10 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h2^ctk+pd9j#@$*!vn@tqk0o4_wxk&)_1patt83n#ui#m!kr&%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-# ALLOWED_HOSTS = ['www.luchettigabriel.com', 'luchettigabriel.com']
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+ALLOWED_HOSTS = ['www.luchettigabriel.com', 'luchettigabriel.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -120,8 +121,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'luchetti-site/browser',  # Caminho para os arquivos estáticos do Angular
+    BASE_DIR / 'luchetti-site/browser',  # Diretório onde os arquivos estáticos estão
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles' 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
